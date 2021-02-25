@@ -1134,7 +1134,7 @@ class Calculator extends Component {
 export const getStaticProps = async () => {
 
   try {
-    const { data } = await axios.get(`http://localhost:1338/users?email_eq=${currentUser.email}`);
+    const { data } = await axios.get(`https://centumapi.herokuapp.com//users?email_eq=${currentUser.email}`);
     const user = await data;
     return {
       props: { user }

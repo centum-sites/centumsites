@@ -52,7 +52,7 @@ const Post = props => {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch('http://localhost:1338/calculators')
+  const res = await fetch('https://centumapi.herokuapp.com//calculators')
   const calculators = await res.json()
 
   const paths = calculators.map((calculator) => `/calculators/${calculator.slug}`)
@@ -60,10 +60,10 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const data = axios.get(`http://localhost:1338/calculators?slug_eq=${params.slug}`).then(res => {
+  const data = axios.get(`https://centumapi.herokuapp.com//calculators?slug_eq=${params.slug}`).then(res => {
     return res.data;
   }).then(async calculators => {
-    const { data } = await axios.get(`http://localhost:1338/users?email_eq=${currentUser.email}`);
+    const { data } = await axios.get(`https://centumapi.herokuapp.com//users?email_eq=${currentUser.email}`);
     const user = data;
 
     return {

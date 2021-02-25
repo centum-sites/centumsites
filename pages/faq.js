@@ -52,10 +52,10 @@ const Faq = props => {
 
 export const getStaticProps = async () => {
 
-  const data = axios.get(`https://centumapi.herokuapp.com//page-faq`).then(res => {
+  const data = axios.get(`https://centumapi.herokuapp.com/page-faq`).then(res => {
     return res.data;
   }).then(async page => {
-    const { data } = await axios.get(`https://centumapi.herokuapp.com//users?email_eq=${currentUser.email}`);
+    const { data } = await axios.get(`https://centumapi.herokuapp.com/users?email_eq=${currentUser.email}`);
     const user = data;
 
     return {

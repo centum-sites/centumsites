@@ -1,0 +1,53 @@
+
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+
+// html,
+// body {
+//   padding: 0;
+//   margin: 0; 
+// }
+
+// html{
+//   font-size: 10px;
+// }
+
+// body {
+//   margin: 0;  
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+
+// a {
+//   color: inherit;
+//   text-decoration: none;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
+
+@mixin responsive($screen) {
+  @if $screen == mobile {
+    @media screen and (min-width: 0) and (max-width: 767px){
+      @content;
+    }
+  }@else if $screen == tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+      @content;
+    }
+  }@else if $screen == desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }@else{
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+ 

@@ -1,0 +1,243 @@
+@import './styles/theme';
+@import './styles/mixins';
+
+.ax_banner{
+  width: 100vw;
+  height: 60rem;  
+  background-image: url('../public/assets/banner-home-2.jpg');
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 0;
+  margin: 13rem 0 0;
+  display: flex;
+  justify-content: center;
+
+
+  .ax_banner_info {
+    width: 60%;
+    display: block;
+    margin: 3.2rem auto;
+
+    h2{
+      font-family: $display-font;
+      font-size: 3.2rem;
+      color: $base-color;
+    }
+  
+    p{
+      font-family: $display-font;
+      font-size: 2.1rem;
+      color: $base-color;
+    }
+  } 
+}
+
+@include responsive(tablet){
+  .ax_banner{
+    background-size: cover;
+  }
+}
+
+@include responsive(mobile){
+  .ax_banner{
+    height: 36rem;
+    background-size: 120%;
+    background-position: bottom center;
+
+    .ax_banner_info{
+      width: 100%;
+      text-align: center;
+
+      h2{
+        font-size: 2.4rem;
+      }
+      p{
+        font-size: 1.4rem;
+      }
+      a{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+
+.ax_text_section{
+  padding: 3.2rem 0;
+  text-align: center;
+  background: $base-color; 
+
+  h2{
+    color: $bright-color;
+    font-size: 3.2rem;
+    font-family: $display-font;
+  } 
+
+  p{
+    color: $bright-color;
+    font-size: 1.6rem;
+    font-family: $body-font;
+  }
+}
+
+.ax_specialties{
+  padding: 3.2rem 0;
+  text-align: center;
+
+  h2{
+    color: $base-color;
+    font-size: 3.2rem;
+    font-family: $display-font;
+  }     
+}
+
+.ax_calculator {
+  width: 100%;
+  display: table;
+  background-image: url('../public/assets/bg-calculator-section.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: auto 100%;
+}
+
+.ax_calculator_cta {
+  height: 60vh;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+
+  >div {
+    h3{
+      font-family: $display-font;
+      font-size: 3.2rem;
+      color: $base-color;    
+    }
+
+    @include responsive(mobile){
+      text-align: center;
+
+      a{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@include responsive(mobile){
+  .ax_calculator {  
+    background-size: 120% auto;
+  }
+
+  .ax_calculator_cta {
+    height: 72vh;
+  }
+}
+
+.ax_presentation {
+  width: 100%;
+  display: table;
+  padding: 5.6rem 0;
+  background: $base-color;
+
+  h3{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $bright-color;
+  }
+
+  p{
+    font-family: $body-font;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: $bright-color;    
+  }
+
+  .ax_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .ax_presentation_text{
+      width: 75%;
+      display: table;
+      a{
+        &:last-child{
+          margin-top: 3.2rem;
+        }
+      }
+    }
+
+    .ax_presentation_photo{
+      width: 20%;
+      display: block;
+      margin: 3.2rem 0;
+
+      img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: .8rem;
+      }
+
+      h3{        
+        color: $highlight-color;
+        margin-bottom: 0;
+      }
+    
+      p{
+        margin-bottom: 0; 
+        margin-top: .8rem;  
+      }     
+    }
+
+    @include responsive(mobile){
+      .ax_presentation_text{
+        width: 100%;
+        text-align: center;
+
+        a {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .ax_presentation_photo{
+        width: 60%;
+        margin: 3.2rem auto;
+      }
+    }
+  }
+}
+
+.ax_map {
+  margin: 0;
+  padding: 3.2rem 0;
+  background-color: $highlight-color;
+
+  h3{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $bright-color;
+  }
+  iframe{
+    border-radius: .8rem;
+  }
+  .ax_map_address{
+    display: flex;
+    justify-content: flex-start;
+
+    p{
+      font-family: $display-font;
+      font-size: 2.1rem;
+      color: $bright-color;
+    }
+  }
+}

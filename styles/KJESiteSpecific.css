@@ -1,0 +1,108 @@
+
+/*
+// CSS Classes  below can be populated and changed to modify your calculator deployment.
+// IMPORTANT: Do Not Modify the KJE.css file!  The KJE.css file is replaced during the update process
+// All CSS customization must be done in this file (you can override KJE.css classes)
+//
+// For information on customizing this file please see:
+// https://www.dinkytown.net/money/V3customize.html
+*/
+
+#KJEAllContent {
+}
+
+#KJECalculatorTable {
+}
+
+.KJEFontHeading {
+}
+
+.KJETitle {
+}
+
+.KJEReportTitle {
+}
+
+.KJEReportTitleBlock {
+}
+
+
+.cp-calculator-left-col {
+    position: relative;
+}
+
+.cp-calculator-head{
+    height: 150px;
+    padding: 5px 15px 0px 15px;
+    background: #48a0d9;
+    position: relative;
+    text-align: center;
+}
+
+.cp-calculator-head a{
+    color: #FFF;
+    letter-spacing: 2px;
+    font-family: 'Raleway';
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 15px 0 100px 0;
+    text-align: center;
+    display: block;
+}
+
+.cp-calculator-head a:hover{
+    text-decoration: none;
+}
+
+.cp-box-tools {
+    position: relative;
+    min-height: 320px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.cp-box-tools:hover {
+    -webkit-box-shadow: 8px 8px 10px 0 rgba(81,81,81,0.15) !important;
+    -moz-box-shadow: 8px 8px 10px 0 rgba(81,81,81,0.15) !important;
+    box-shadow: 8px 8px 10px 0 rgba(81,81,81,0.15) !important;
+    cursor: pointer;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.cp-box-tools:hover > .cp-calculator-head {
+    background: #8bbe4e !important;
+}
+
+.cp-ico-tools {
+    max-width: 83%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+}
+
+.cp-ico-tools img{
+    margin: 0 auto;
+}
+
+.cp-box-tools-body {
+    width: 100%;
+    display: block;
+    padding: 65px 15px 0 15px;
+    text-align: center;
+}
+
+.cp-box-tools-body p {
+    color: #555555;
+}
+

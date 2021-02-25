@@ -1,0 +1,29 @@
+@import 'theme';
+@import 'mixins';
+
+.ax_calculators {
+  width: 100%;
+  padding-top: 16rem;
+
+  h1{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $base-color;
+  }
+
+  p{
+    font-family: $body-font;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: $base-color;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.ax_calculators_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}

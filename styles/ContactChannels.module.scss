@@ -1,0 +1,85 @@
+@import './styles/theme';
+@import './styles/mixins';
+
+.ax_contact_channels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .ax_channel{
+      width: calc(33% - 1.6rem);
+      height: auto;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+      margin: 0 0 3.2rem 0 ;
+      padding: 1.6rem 1.6rem 6rem 1.6rem;
+      border-radius: .6rem;
+      background: $bright-color;
+      box-shadow: $shadow-large;
+      transition: all .2s $cubic-transition;      
+
+      &:hover{
+        transform: scale(1.06);
+      }
+
+    h3{
+      font-family: $display-font;
+      font-size: 1.8rem;
+      color: $highlight-color;
+      font-weight: 700;
+    }
+
+    p{
+      font-family: $display-font;
+      font-size: 1.4rem;
+      color: $base-color;
+      font-weight: 700;
+    }
+
+    a{
+      width: calc(100% - 3.2rem);
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      bottom: 1.6rem;
+    }
+
+    .ax_channel_icon {
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 3.2rem auto;
+      background: $base-color;
+      border-radius: 50%;
+      padding: 2.4rem;   
+      text-align: center;   
+
+      img{
+        width: 60%;
+        max-width: 60%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  @include responsive(tablet){
+    .ax_channel{
+      width: calc(50% - 1.6rem);
+    }
+  }
+
+  @include responsive(mobile){
+    .ax_channel{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

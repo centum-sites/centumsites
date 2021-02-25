@@ -1,0 +1,76 @@
+@import './styles/theme';
+@import './styles/mixins';
+
+.ax_mortgage_process{
+  margin-top: 13rem;
+  padding: 3.2rem 0 0 0;
+  text-align: center;
+
+  h1{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $base-color;
+  }
+
+  h3{
+    font-family: $display-font;
+    font-size: 2.4rem;
+    color: $base-color;
+    margin-bottom: 4rem;
+  }  
+}
+
+.ax_process_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  .ax_process_step {
+    width: calc(33% - 3.2rem);
+    margin-right: 3.2rem;   
+    display: block;
+  }
+
+  @include responsive(tablet){
+    .ax_process_step {
+      width: calc(50% - 3.2rem);
+    }
+  }
+
+  @include responsive(mobile){
+    .ax_process_step {
+      width: calc(100% - 3.2rem);
+      margin-right: 0;
+    }
+  }
+}
+
+.ax_process_cta {
+  width: 100%;
+  padding: 3.2rem 0 6rem 0;
+
+  h3{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $base-color !important;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p{
+    font-family: $body-font;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: $base-color;
+    font-weight: 400 ;
+  }
+
+  a {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.2rem;
+  }
+}

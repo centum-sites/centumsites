@@ -1,0 +1,96 @@
+@import './styles/theme';
+@import './styles/mixins';
+
+.ax_contact {
+  margin-top: 13rem;
+}
+
+.ax_presentation {
+  width: 100%;
+  display: table;
+  padding: 3.2rem 0 0 0;
+  background: $bright-color;
+
+  h1{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $base-color;
+  }
+
+  p{
+    font-family: $body-font;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: $base-color;    
+  }
+
+  .ax_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .ax_presentation_text{
+      width: 50%;
+      display: table;
+      a{
+        &:last-child{
+          margin-top: 3.2rem;
+        }
+      }
+    }
+
+    .ax_presentation_photo{
+      width: 45%;
+      display: block;
+      margin: 3.2rem 0;
+
+      img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: .8rem;
+      }
+
+      h3{        
+        color: $highlight-color;
+        margin-bottom: 0;
+      }
+    
+      p{
+        margin-bottom: 0; 
+        margin-top: .8rem;  
+      }
+
+     
+    }
+
+    @include responsive(mobile){
+      .ax_presentation_text{
+        width: 100%;
+        text-align: center;
+      }
+
+      .ax_presentation_photo{
+        width: 60%;
+        margin: 3.2rem auto;
+      }
+    }
+  }
+}
+
+.ax_contact_contact {
+  h3{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $base-color;
+  }
+
+  p{
+    font-family: $body-font;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: $base-color;    
+  }
+}

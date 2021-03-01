@@ -85,5 +85,23 @@
       }
     }
   }
-  
+  .ax_copyright{
+    width: 100%;
+    height: 4rem;    
+    text-align: center;
+    font-family: $display-font;
+    color: $bright-color;
+    font-weight: 400;
+    display: block;
+    font-size: 1.4rem;
+    background: rgba(255, 255, 255, .08);
+
+    p{
+      line-height: 4rem;
+    }
+
+    span{
+      opacity: .8;
+    }
+  }
 }

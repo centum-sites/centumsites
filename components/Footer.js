@@ -10,6 +10,7 @@ const Footer = props => {
 
   const formatedPhone = formatPhone(props.phone);
 
+  const year = new Date().getFullYear();
 
   const faxNumber = () => {
 
@@ -72,6 +73,10 @@ const Footer = props => {
           </div>
         </div>
       </div>
+      <section className={style.ax_copyright}>
+        <p> Proud Member of the Centum Network. <span>© {year} Centum Financial Group Inc.</span></p>
+      </section>
+
     </footer>
   )
 }

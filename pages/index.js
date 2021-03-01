@@ -2,6 +2,7 @@ import currentUser from '../utils/currentUser';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
+import RateTable from '../components/RateTable'
 import CarouselSpecialties from '../components/CarouselSpecialties';
 import GoogleMap from '../components/GoogleMap';
 import Markdown from '../components/Markdown';
@@ -44,10 +45,16 @@ const Home = (props) => {
       </section>
       <section className={style.ax_calculator}>
         <div className={style.ax_container}>
-          <div className={style.ax_calculator_cta}>
-            <div>
-              <h3>{page.calculator.title}</h3>
-              <Button sizing="large" color="highlight" isLink linkPath="/mortgage-calculators" label="Go To Calculators" />
+          <div className={style.ax_numbers}>
+            <div className={style.ax_rate_table}>
+              <h3>Lowest Rates* in Canada</h3>
+              <RateTable rates={props.rates} />
+            </div>
+            <div className={style.ax_calculator_cta}>
+              <div>
+                <h3>{page.calculator.title}</h3>
+                <Button sizing="large" color="highlight" isLink linkPath="/mortgage-calculators" label="Go To Calculators" />
+              </div>
             </div>
           </div>
         </div>
@@ -98,13 +105,23 @@ export const getStaticProps = async () => {
   const data = axios.get(`https://centumapi.herokuapp.com/page-home`).then(res => {
     return res.data;
   }).then(async page => {
+    const { data } = await axios.get(`https://centumapi.herokuapp.com/rates`);
+    const rates = data;
+
+    return {
+      page,
+      rates
+    }
+
+  }).then(async info => {
     const { data } = await axios.get(`https://centumapi.herokuapp.com/users?email_eq=${currentUser.email}`);
     const user = data;
-
+    const { page, rates } = info;
     return {
       revalidate: 1,
       props: {
         page,
+        rates,
         user
       }
     }
@@ -112,9 +129,7 @@ export const getStaticProps = async () => {
   }).catch(error => {
     console.log(error)
   });
-
   return data;
-
 }
 
 export default Home;

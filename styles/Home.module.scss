@@ -96,22 +96,103 @@
 
 .ax_calculator {
   width: 100%;
-  display: table;
-  background-image: url('../public/assets/bg-calculator-section.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: auto 100%;
+  display: table;  
+}
+
+.ax_numbers{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ax_rate_table{
+  width: 50%;
+
+  h3{
+    font-family: $display-font;
+    font-size: 3.2rem;
+    color: $base-color;    
+  }
+
+  table{
+    width: 70%;
+    background: #fff;
+    border-bottom: .1rem solid $base-color;
+
+    th{
+      font-family: $display-font;
+      font-size: 1.6rem;
+      color: $highlight-color;
+      text-align: left;
+      border-bottom: .1rem solid $base-color;
+      &:nth-child(2), &:nth-child(3){        
+        text-align: center;
+      } 
+    }
+
+    td{
+      height: 3.2rem;
+      vertical-align: middle;
+      font-family: $body-font;
+      font-size: 1.3rem;
+      border-bottom: .1rem solid $light-gray;
+
+      &:nth-child(1){
+        width: 16rem;
+      }
+      &:nth-child(2){        
+        font-weight: 800;
+        color: $highlight-color;
+        text-align: center;
+      }
+      
+      &:nth-child(3){        
+        text-align: center;
+      } 
+    }
+
+    tbody{
+      tr{
+       &:last-child{
+        td{
+          border-bottom: .1rem solid $base-color;
+        }
+      } 
+      }      
+    }
+
+    tfoot{
+      td{
+        border: none;
+        padding-bottom: .8rem;
+      }      
+    }
+  }
+
+  p{
+    font-size: 1.2rem;
+  }
+  small{
+    font-size: .9rem;
+  }
+    
 }
 
 .ax_calculator_cta {
   height: 60vh;
   display: flex;
-  width: 100%;
+  width: 50%;
   flex-direction: row;
   justify-content: flex-end;
-  
+  background-image: url('../public/assets/bg-calculator-section.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100% auto;
 
   >div {
+    width: 100%;
     h3{
       font-family: $display-font;
       font-size: 3.2rem;
@@ -126,16 +207,32 @@
         margin-right: auto;
       }
     }
-  }
+  }  
 }
+
+
 
 @include responsive(mobile){
   .ax_calculator {  
     background-size: 120% auto;
   }
 
+  .ax_rate_table{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+
+    h3{
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   .ax_calculator_cta {
-    height: 72vh;
+    width: 100%;
+    height: 60vh;
   }
 }
 
@@ -214,6 +311,12 @@
         margin: 3.2rem auto;
       }
     }
+  }
+}
+
+@include responsive(tablet){
+  .ax_calculator_cta {
+    height: 45vh;
   }
 }
 

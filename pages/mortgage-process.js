@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import style from '../styles/MortgageProcess.module.scss';
 import axios from 'axios';
 
-
 const MortgageProcess = props => {
 
   const page = props.page;
@@ -19,7 +18,7 @@ const MortgageProcess = props => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Navbar logo={user.logoHeader.url} logo2={user.hasLogo2 ? user.logoHeader2.url : ''} email={user.email} phone={user.phone} showWhatsAppButton={user.whatsapp} />
+      <Navbar faviconURL={user.siteIcon.url} logo={user.logoHeader.url} logo2={user.hasLogo2 ? user.logoHeader2.url : ''} email={user.email} phone={user.phone} showWhatsAppButton={user.whatsapp} />
       <section className={style.ax_mortgage_process}>
         <div className={style.ax_container}>
           <h1>{page.title}</h1>

@@ -63,9 +63,12 @@ const Navbar = (props) => {
 
   const formatedPhone = formatPhone();
 
+  console.log(props.faviconURL)
+
   return (
     <>
       <Head>
+        <link rel="icon" type="image/png" href={props.faviconURL} />
         <title>{props.siteTitle}</title>
       </Head>
       {props.showWhatsAppButton ? <WhatsAppButton phone={props.phone} /> : ''}

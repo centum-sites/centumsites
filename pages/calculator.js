@@ -712,7 +712,7 @@ class Calculator extends Component {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <Navbar logo={user.logoHeader.url} logo2={user.hasLogo2 ? user.logoHeader2.url : ''} email={user.email} phone={user.phone} showWhatsAppButton={user.whatsapp} />
+        <Navbar faviconURL={user.siteIcon.url} logo={user.logoHeader.url} logo2={user.hasLogo2 ? user.logoHeader2.url : ''} email={user.email} phone={user.phone} showWhatsAppButton={user.whatsapp} />
 
         <div className={style.ax_calc_App}>
           <div className={style.ax_calc_container}>

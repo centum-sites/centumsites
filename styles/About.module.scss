@@ -30,7 +30,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .ax_presentation_text{
+    .ax_presentation_text, .ax_presentation_text_fake{
       width: 75%;
       display: table;
       a{
@@ -40,7 +40,15 @@
       }
     }
 
-    .ax_presentation_photo{
+    .ax_presentation_text_fake {
+      width: 70%;
+      h1{
+        color: $highlight-color !important;
+
+      }
+    }
+
+    .ax_presentation_photo, .ax_presentation_photo_fake{
       width: 20%;
       display: block;
       margin: 3.2rem 0;
@@ -67,6 +75,8 @@
 
      
     }
+
+    .ax_presentation_photo_fake{width: 30%;}
 
     @include responsive(mobile){
       .ax_presentation_text{

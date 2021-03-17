@@ -24,16 +24,11 @@ const Home = props => {
       <section className={`${style.ax_presentation} ${style.ax_about}`}>
         <div className={style.ax_container}>
           <div className={style.ax_presentation_text_fake}>
-            <h1 style={{ fontSize: '28px', color: '##910023' }}>1. Working with Centum makes me better Looking</h1>
-            <h1 style={{ fontSize: '28px', color: '##910023' }}>2. Working with Centum makes me better Looking</h1>
-            <h1 style={{ fontSize: '28px', color: '##910023' }}>3. Working with Centum makes me better Looking</h1>
-            <h1 style={{ fontSize: '28px', color: '##910023' }}>4. Working with Centum makes me better Looking</h1>
-            <h1 style={{ fontSize: '28px', color: '##910023' }}>5. Working with Centum makes me better Looking</h1>
-
+            <h1 style={{ fontSize: '28px', color: '##910023' }}>1. Working with Centum makes me better looking</h1>
 
           </div>
           <div className={style.ax_presentation_photo_fake} >
-            <img src="/assets/GordRoss-Low-Res.png" alt="Gord Ross" />
+            <img src="/assets/gord.png" alt="Gord Ross" />
           </div>
         </div>
       </section>

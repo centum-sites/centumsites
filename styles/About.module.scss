@@ -76,7 +76,7 @@
      
     }
 
-    .ax_presentation_photo_fake{width: 30%;}
+    .ax_presentation_photo_fake{width: 30%; transform: translateX(-40px) translateY(-40px); background: #f2f5f9; border-radius: 8px;}
 
     @include responsive(mobile){
       .ax_presentation_text{

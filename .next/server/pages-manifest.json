@@ -1,17 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/about": "pages/about.js",
-  "/api/hello": "pages/api/hello.js",
-  "/calculator": "pages/calculator.js",
-  "/calculators/[slug]": "pages/calculators/[slug].js",
-  "/contact": "pages/contact.js",
-  "/faq": "pages/faq.js",
-  "/": "pages/index.js",
-  "/know-your-insurance": "pages/know-your-insurance.js",
-  "/mortgage-calculators": "pages/mortgage-calculators.js",
-  "/mortgage-process": "pages/mortgage-process.js",
-  "/posts/[slug]": "pages/posts/[slug].js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }

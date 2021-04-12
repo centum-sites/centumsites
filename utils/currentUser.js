@@ -1,5 +1,5 @@
 const currentUser = {
-  email: 'shafraaz@kvcapital.ca'
+  email: 'yourmrtgpro@gmail.com'
 }
 
 export default currentUser;

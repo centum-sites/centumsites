@@ -72,10 +72,10 @@ const Home = props => {
 
 export const getStaticProps = async () => {
 
-  const data = axios.get(`http://localhost:1338/page-calculators`).then(res => {
+  const data = axios.get(`https://centumapi.herokuapp.com/page-calculators`).then(res => {
     return res.data;
   }).then(async page => {
-    const { data } = await axios.get(`http://localhost:1338/users?email_eq=${currentUser.email}`);
+    const { data } = await axios.get(`https://centumapi.herokuapp.com/users?email_eq=${currentUser.email}`);
     const user = data;
 
     return {
